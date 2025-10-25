@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! | OnlyPipe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-card">
+        
+        <div class="icon-wrapper">
+            <i class="fas fa-envelope-open-text"></i>
+        </div>
+
+        <h1>Thank You, <span id="user-name">[Name]</span>!</h1>
+
+        <p class="subtitle">
+            We've sent a verification link to 
+            <strong id="user-email"></strong>.
+        </p>
+        
+        <p>
+            Please check your inbox (and spam folder!) and click the link to 
+            activate your account.
+        </p>
+
+        <a href="index.html" class="btn-back">Back to Home</a>
+
+        <div class="resend-wrapper">
+            <p>Didn't get an email? <a href="#" id="resend-link">Resend verification</a></p>
+        </div>
+
+    </div>
+
+     <script src="dashboard.js"></script> 
+
+</body>
+</html>

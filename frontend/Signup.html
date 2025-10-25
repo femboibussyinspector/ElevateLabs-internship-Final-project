@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - OnlyPipe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="signup-card">
+
+        <div class="left-panel">
+            <div class="logo">
+                <i class="fas fa-circle-notch"></i>
+                <span>OnlyPipe</span>
+            </div>
+
+            <h1>Get Started with Us</h1>
+            <p>Complete these easy steps to register your account.</p>
+
+            <ul class="stepper">
+                <li class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Sign up your account</span>
+                </li>
+                <li class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Set up your workspace</span>
+                </li>
+                <li class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Set up your profile</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right-panel">
+            <h2>Sign Up Account</h2>
+            <p class="subtitle">Enter your personal data to create your account.</p>
+
+            <div class="social-logins">
+                <button class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </button>
+                <button class="social-btn github">
+                    <i class="fab fa-github"></i>
+                    <span>Github</span>
+                </button>
+            </div>
+
+            <div class="divider">
+                <span>Or</span>
+            </div>
+
+            <form id="signupForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="eg. John">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="eg. Francisco">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="eg. johnfrann@gmail.com" required>
+                </div>
+
+                <div class="form-group password-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <button type="button" class="password-toggle">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <p class="password-hint">Must be at least 8 characters.</p>
+
+                <button type="submit" class="btn-signup">Sign Up</button>
+            </form>
+            <div id="message-area" class="message-area"></div>
+
+            <p class="login-link">
+                Already have an account? <a href="#">Log in</a>
+            </p>
+        </div>
+
+    </div>
+    
+  <script src="script.js"></script>
+</body>
+</html>
+

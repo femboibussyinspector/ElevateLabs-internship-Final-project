@@ -1,0 +1,421 @@
+
+:root {
+    --bg-page: linear-gradient(300deg, black, rgb(21, 1, 41));
+    --bg-card: #0d0b14;
+    --bg-form-input: #1f232f;
+    --bg-step-inactive: #2a2f3d;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a3af;
+    --border-color: #2a2f3d;
+    --purple-gradient: radial-gradient(at 0% 0%, #581c87 0%, #0d0b14 50%);
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    --accent-purple: #7b34ff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background: var(--bg-page);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .landing-container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 2rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 0;
+    width: 100%;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  
+  .logo i {
+    color: var(--accent-purple);
+    font-size: 1.3rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--text-primary);
+  }
+  
+  .btn-nav-signup,
+  .btn-cta {
+    padding: 0.7rem 1.7rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .btn-nav-signup {
+    background: var(--bg-form-input);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .btn-nav-signup:hover {
+    background-color: var(--border-color);
+  }
+  
+  .btn-cta {
+    background: var(--text-primary);
+    color: var(--bg-card);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+  }
+  
+  .btn-cta:hover {
+    background-color: #e0e0e0; 
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: calc(100vh - 120px);
+    padding: 4rem 0;
+  }
+  
+  .hero-title {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+  
+  @media (max-width: 900px) {
+    body {
+      padding: 0 1rem;
+    }
+    
+    .landing-container {
+      padding: 0 1rem;
+    }
+  
+    .hero {
+      min-height: auto;
+      padding: 5rem 0;
+    }
+  
+    .hero-title {
+      font-size: 2.8rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .nav-links a:not(.btn-nav-signup) {
+      display: none;
+    }
+  
+    .navbar {
+      padding: 1.5rem 0;
+    }
+  }
+
+.features-section,
+.testimonials-section,
+.pricing-section {
+    padding: 6rem 0; 
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 3rem auto; 
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--accent-purple);
+    background-color: rgba(123, 52, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: var(--bg-form-input);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.testimonial-author h4 {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.testimonial-author span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center; 
+}
+
+.pricing-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.featured {
+    border-color: var(--accent-purple);
+    transform: scale(1.05); 
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: -35px;
+    background: var(--accent-purple);
+    color: var(--text-primary);
+    padding: 0.3rem 3rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transform: rotate(45deg);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.price sup {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.price span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.pricing-card p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    min-height: 40px; 
+}
+
+.pricing-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.pricing-card ul li {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.pricing-card ul li i {
+    color: var(--accent-purple);
+    margin-right: 0.75rem;
+}
+
+.btn-pricing, .btn-pricing-featured {
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-pricing {
+    background: var(--bg-form-input);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+.btn-pricing:hover {
+    background: var(--border-color);
+}
+
+.btn-pricing-featured {
+    background: var(--accent-purple);
+    color: var(--text-primary);
+}
+.btn-pricing-featured:hover {
+    filter: brightness(1.2);
+}
+
+.footer {
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.footer .logo {
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .features-section,
+    .testimonials-section,
+    .pricing-section {
+        padding: 4rem 0;
+    }
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-card.featured {
+        transform: scale(1); 
+    }
+}
